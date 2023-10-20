@@ -1,0 +1,72 @@
+{
+  "name": "@digitalbazaar/vdl-aamva-context",
+  "version": "0.0.1",
+  "description": "VDL AAMVA context for JSON-LD.",
+  "main": "js/index.js",
+  "module": "./dist/main.esm.js",
+  "files": [
+    "contexts/**/*.jsonld",
+    "dist/**/*.LICENSE.txt",
+    "dist/**/main.esm.js",
+    "dist/**/main.js",
+    "js/**/*.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitalbazaar/vdl-aamva-context"
+  },
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/vdl-aamva-context/issues"
+  },
+  "author": {
+    "name": "Digital Bazaar, Inc.",
+    "email": "support@digitalbazaar.com",
+    "url": "https://digitalbazaar.com/"
+  },
+  "homepage": "https://github.com/digitalbazaar/vdl-aamva-context#readme",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "JSON-LD context",
+    "JSON-LD",
+    "Linked Data",
+    "VDL",
+    "AAMVA",
+    "Verifiable Driver's License",
+
+    "VC",
+    "Verifiable Credentials",
+    "context"
+  ],
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.51.0",
+    "eslint-config-digitalbazaar": "^5.0.1",
+    "json-loader": "^0.5.7",
+    "karma": "^6.4.2",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-mocha": "^2.0.1",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-sourcemap-loader": "^0.4.0",
+    "karma-webpack": "^5.0.0",
+    "mocha": "^10.2.0",
+    "rollup": "^4.1.4",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run serialize && webpack && rollup -c",
+    "clean": "rm -rf dist/* && rm -rf contexts/*.jsonld",
+    "lint": "eslint --ext .cjs,.js .",
+    "prepare": "npm run build",
+    "serialize": "node bin/serialize.js",
+    "test": "npm run lint && npm run build && npm run test-node && npm run test-karma",
+    "test-karma": "karma start test/karma.conf.js",
+    "test-node": "cross-env NODE_ENV=test mocha --preserve-symlinks test/**/*.spec.js"
+  }
+}
