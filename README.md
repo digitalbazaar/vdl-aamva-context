@@ -40,7 +40,7 @@ import {
   CONTEXT_URL,
   constants,
   context
-} from '@digialbazaar/vdl-aamva-context';
+} from '@digitalbazaar/vdl-aamva-context';
 
 // CommonJS
 const ctx = require('@digitalbazaar/vdl-aamva-context');
