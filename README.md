@@ -10,6 +10,8 @@
 - [Background](#background)
 - [Install](#install)
 - [Usage](#usage)
+- [API](#api)
+- [Status](#status)
 - [Developing](#developing)
 - [Commercial Support](#commercial-support)
 - [License](#license)
@@ -18,7 +20,7 @@
 
 See also (related specs):
 
-* https://w3c-ccg.github.io/vdl-vocab/
+* https://w3c-ccg.github.io/vdl-vocab
 * https://github.com/w3c-ccg/vdl-vocab
 
 ## Install
@@ -107,6 +109,6 @@ Digital Bazaar: support@digitalbazaar.com
 - BSD 3-Clause © Digital Bazaar
 - See the [LICENSE](./LICENSE) file for details.
 
-[CBOR-LD]: https://digitalbazaar.github.io/cbor-ld-spec/
+[CBOR-LD]: https://digitalbazaar.github.io/cbor-ld-spec
 [cborld]: https://github.com/digitalbazaar/cborld
-[webpack]: https://webpack.js.org/
+[webpack]: https://webpack.js.org
