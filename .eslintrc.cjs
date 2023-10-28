@@ -6,5 +6,12 @@ module.exports = {
   env: {
     node: true
   },
+  extends: [
+    'digitalbazaar',
+    'digitalbazaar/module'
+  ],
+  rules: {
+    'unicorn/prefer-node-protocol': 'error'
+  },
   ignorePatterns: ['dist/']
 };
