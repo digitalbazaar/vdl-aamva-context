@@ -1,15 +1,15 @@
 /*!
  * Copyright (c) 2023 Digital Bazaar, Inc. All rights reserved.
  */
-const chai = require('chai');
+import chai from 'chai';
 chai.should();
 const {expect} = chai;
 
-const {
-  CONTEXT, CONTEXT_URL, appContextMap, contexts, constants
-} = require('..');
+import {
+  appContextMap, constants, CONTEXT, CONTEXT_URL, contexts
+} from '../js/index.js';
 
-describe('Context (require)', () => {
+describe('Context (import)', () => {
   it('constants', async () => {
     expect(appContextMap).to.exist;
     expect(constants).to.exist;

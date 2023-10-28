@@ -1,15 +1,13 @@
 /*!
  * Copyright (c) 2023 Digital Bazaar, Inc. All rights reserved.
  */
-/* eslint-disable-next-line quotes */
-'use strict';
-
 // Use JSON style for context
 /* eslint quotes: ['error', 'double'] */
 /* eslint quote-props: ['error', 'always'] */
 /* eslint-disable max-len */
 
-module.exports = {
+export default
+{
   "@context": {
     "@protected": true,
     "aamva_aka_family_name_v2": "https://w3id.org/vdl/aamva#akaFamilyNameV2",

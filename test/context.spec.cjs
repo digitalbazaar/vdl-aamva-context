@@ -1,15 +1,15 @@
 /*!
  * Copyright (c) 2023 Digital Bazaar, Inc. All rights reserved.
  */
-import chai from 'chai';
+const chai = require('chai');
 chai.should();
 const {expect} = chai;
 
-import {
+const {
   appContextMap, constants, CONTEXT, CONTEXT_URL, contexts
-} from '../dist/main.esm.mjs';
+} = require('../dist/main.cjs');
 
-describe('Context (import)', () => {
+describe('Context (require)', () => {
   it('constants', async () => {
     expect(appContextMap).to.exist;
     expect(constants).to.exist;
