@@ -3,12 +3,15 @@
   "version": "0.0.1",
   "description": "VDL AAMVA context for JSON-LD.",
   "main": "js/index.js",
-  "module": "./dist/main.esm.js",
+  "module": "./dist/main.esm.mjs",
+  "exports": {
+    "require": "./js/index.js",
+    "import": "./dist/main.esm.mjs"
+  },
   "files": [
     "contexts/**/*.jsonld",
     "dist/**/*.LICENSE.txt",
-    "dist/**/main.esm.js",
-    "dist/**/main.js",
+    "dist/**/main.esm.mjs",
     "js/**/*.js"
   ],
   "repository": {
@@ -32,7 +35,6 @@
     "VDL",
     "AAMVA",
     "Verifiable Driver's License",
-
     "VC",
     "Verifiable Credentials",
     "context"
@@ -67,6 +69,6 @@
     "serialize": "node bin/serialize.js",
     "test": "npm run lint && npm run build && npm run test-node && npm run test-karma",
     "test-karma": "karma start test/karma.conf.js",
-    "test-node": "cross-env NODE_ENV=test mocha --preserve-symlinks test/**/*.spec.js"
+    "test-node": "cross-env NODE_ENV=test mocha --preserve-symlinks test/**/*.spec.js test/**/*.spec.mjs"
   }
 }
