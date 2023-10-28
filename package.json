@@ -2,16 +2,17 @@
   "name": "@digitalbazaar/vdl-aamva-context",
   "version": "0.0.1",
   "description": "VDL AAMVA context for JSON-LD.",
+  "type": "module",
   "main": "js/index.js",
-  "module": "./dist/main.esm.mjs",
+  "module": "./dist/main.cjs",
   "exports": {
-    "require": "./js/index.js",
-    "import": "./dist/main.esm.mjs"
+    "import": "./js/index.js",
+    "require": "./dist/main.cjs"
   },
   "files": [
     "contexts/**/*.jsonld",
     "dist/**/*.LICENSE.txt",
-    "dist/**/main.esm.mjs",
+    "dist/**/main.cjs",
     "js/**/*.js"
   ],
   "repository": {
@@ -42,9 +43,9 @@
   "devDependencies": {
     "chai": "^4.3.10",
     "cross-env": "^7.0.3",
-    "eslint": "^8.51.0",
+    "eslint": "^8.52.0",
     "eslint-config-digitalbazaar": "^5.0.1",
-    "json-loader": "^0.5.7",
+    "eslint-plugin-unicorn": "^48.0.1",
     "karma": "^6.4.2",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^3.2.0",
@@ -53,8 +54,6 @@
     "karma-sourcemap-loader": "^0.4.0",
     "karma-webpack": "^5.0.0",
     "mocha": "^10.2.0",
-    "rollup": "^4.1.4",
-    "rollup-plugin-commonjs": "^10.1.0",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   },
@@ -62,13 +61,13 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "npm run clean && npm run serialize && webpack && rollup -c",
+    "build": "npm run clean && npm run serialize && webpack",
     "clean": "rm -rf dist/* && rm -rf contexts/*.jsonld",
     "lint": "eslint --ext .cjs,.js .",
     "prepare": "npm run build",
     "serialize": "node bin/serialize.js",
     "test": "npm run lint && npm run build && npm run test-node && npm run test-karma",
-    "test-karma": "karma start test/karma.conf.js",
-    "test-node": "cross-env NODE_ENV=test mocha --preserve-symlinks test/**/*.spec.js test/**/*.spec.mjs"
+    "test-karma": "karma start test/karma.conf.cjs",
+    "test-node": "cross-env NODE_ENV=test mocha --preserve-symlinks test/**/*.spec.js test/**/*.spec.cjs"
   }
 }

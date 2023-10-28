@@ -1,7 +1,10 @@
 module.exports = function(config) {
   const frameworks = ['mocha', 'chai'];
 
-  const files = ['*.spec.js'];
+  const files = [
+    {pattern: '*.spec.js', type: 'module'},
+    {pattern: '*.spec.cjs', type: 'js'}
+  ];
 
   // browser launchers: https://npmjs.org/browse/keyword/karma-launcher
   // browsers: ['ChromeHeadless', 'Chrome', 'Firefox', 'Safari'],
@@ -46,7 +49,8 @@ module.exports = function(config) {
     // available preprocessors:
     // https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      '*.spec.js': preprocessors
+      '*.spec.js': preprocessors,
+      '*.spec.cjs': preprocessors
     },
 
     webpack: {

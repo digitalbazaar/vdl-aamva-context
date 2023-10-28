@@ -2,11 +2,12 @@
 /*!
  * Copyright (c) 2021-2023 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
+import * as ctx from '../js/index.js';
+import {fileURLToPath} from 'node:url';
+import fs from 'node:fs';
+import path from 'node:path';
 
-const fs = require('fs');
-const path = require('path');
-const ctx = require('..');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Serialize the context as JSON-LD
 fs.writeFileSync(
