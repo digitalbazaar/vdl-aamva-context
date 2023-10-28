@@ -4,7 +4,7 @@ module.exports = {
   // Input is created by webpack in previous build step, in CommonJS format.
   input: 'dist/main.js',
   output: {
-    file: 'dist/main.esm.js',
+    file: 'dist/main.esm.mjs',
     format: 'esm'
   },
   plugins: [
