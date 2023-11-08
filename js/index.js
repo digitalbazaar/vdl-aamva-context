@@ -17,7 +17,7 @@ appContextMap.set(CONTEXT_URL, CBORLD_VALUE);
 
 module.exports = {
   CONTEXT: context,
-  CONTEXT_URL: CONTEXT_URL,
+  CONTEXT_URL,
   appContextMap,
   constants,
   contexts
