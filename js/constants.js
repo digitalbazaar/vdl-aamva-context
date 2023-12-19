@@ -1,9 +1,8 @@
 /*!
  * Copyright (c) 2023 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
 
-module.exports = {
+export default {
   // default context output filename under ./contexts/
   CONTEXT_FILENAME: 'vdl-aamva-v1.jsonld',
   // default context well known URL id
