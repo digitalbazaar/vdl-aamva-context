@@ -1,7 +1,7 @@
 {
   "name": "@digitalbazaar/vdl-aamva-context",
   "version": "0.0.1",
-  "description": "VDL AAMVA context for JSON-LD.",
+  "description": "AAMVA Verifiable Driver's License (VDL AAMVA) context for JSON-LD.",
   "type": "module",
   "main": "js/index.js",
   "module": "./dist/main.cjs",

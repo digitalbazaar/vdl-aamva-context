@@ -6,7 +6,7 @@ chai.should();
 const {expect} = chai;
 
 const {
-  appContextMap, constants, CONTEXT, CONTEXT_URL, contexts
+  appContextMap, constants, contexts, CONTEXT, CONTEXT_URL
 } = require('../dist/main.cjs');
 
 describe('Context (require)', () => {
